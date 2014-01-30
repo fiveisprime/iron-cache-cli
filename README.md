@@ -9,18 +9,63 @@ Command line interface for iron cache.
 
     Commands:
 
-      defaults <project> <token>  set the default values for project and token
+      project <id>                set the default project
+      token <token>               set the default token
+      cache <cache>               set the default cache
       list                        list all caches for a project
-      info <cache>                get information about a cache
-      get <cache> <key>           get the value of the specified key in the specified cache
-      put <cache> <key> <value>   set the value of the specified key in the specified cache
+      info [options]              get information about a cache
+      get [options] <key>         get the value of the specified key in the specified cache
+      put [options] <key> <value> set the value of the specified key in the specified cache
 
     Options:
 
-      -h, --help           output usage information
-      -V, --version        output the version number
-      -p, --project <id>   select the project to use (overrides defaults)
-      -t, --token <token>  select the token to use (overrides defaults)
+      -h, --help     output usage information
+      -V, --version  output the version number
+
+## Defaults
+
+Set the project and token to use by running `$ cache token my-token` and
+`$ cache project my-project`. Optionally set a default cache to use:
+`$ cache cache my-cache` otherwise pass the cache to use with the -c (--cache)
+options.
+
+### Example
+
+Set defaults and use the cache:
+
+    $ cache token my-token
+    $ cache project my-project-id
+    $ cache cache my-cache
+    $ cache info
+
+    id:         57e85t6e8d0a5e5a9d000eb9
+    created_at: 0001-01-01T00:00:00Z
+    updated_at: 0001-01-01T00:00:00Z
+    project_id: my-project-id
+    name:       my-cache
+    size:       36
+    data_size:  0
+
+    $ cache get my-key
+
+    cache:   my-cache
+    key:     my-key
+    value:   The value of my key
+    cas:     5974142746743636948
+    flags:   0
+    expires: 9999-01-01T00:00:00Z
+
+Override defaults with options:
+
+    $ cache -c other-cache info
+
+    id:         52f86f3c1ef7915b7f000d85
+    created_at: 0001-01-01T00:00:00Z
+    updated_at: 0001-01-01T00:00:00Z
+    project_id: my-project-id
+    name:       other-cache
+    size:       7
+    data_size:  0
 
 # License
 
