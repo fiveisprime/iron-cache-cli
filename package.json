@@ -1,0 +1,42 @@
+{
+  "name": "iron-cache-cli",
+  "version": "0.0.0",
+  "description": "Command line interface for managing Iron Caches.",
+  "bin": {
+    "cache": "./bin/cache"
+  },
+  "preferGlobal": true,
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fiveisprime/iron-cache-cli.git"
+  },
+  "keywords": [
+    "iron",
+    "cache",
+    "iron cache",
+    "cli",
+    "command",
+    "line",
+    "command line"
+  ],
+  "author": "Matt Hernandez <matt@modulus.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fiveisprime/iron-cache-cli/issues"
+  },
+  "homepage": "https://github.com/fiveisprime/iron-cache-cli",
+  "dependencies": {
+    "commander": "~2.1.0",
+    "iron-cache": "~0.1.0",
+    "prettyjson": "~0.10.0"
+  },
+  "devDependencies": {
+    "jshint": "~2.3.0",
+    "should": "~2.1.1",
+    "mocha": "~1.15.1",
+    "istanbul": "~0.2.3"
+  }
+}
