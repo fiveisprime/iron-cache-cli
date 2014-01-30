@@ -9,13 +9,14 @@ Command line interface for iron cache.
 
     Commands:
 
-      project <id>                set the default project
-      token <token>               set the default token
-      cache <cache>               set the default cache
-      list                        list all caches for a project
-      info [options]              get information about a cache
-      get [options] <key>         get the value of the specified key in the specified cache
-      put [options] <key> <value> set the value of the specified key in the specified cache
+      defaults                      view your current defaults
+      project <id>                  set the default project
+      token <token>                 set the default token
+      cache <cache>                 set the default cache
+      list                          list all caches for a project
+      info [options]                get information about a cache
+      get  [options] <key>          get the value of the specified key in the specified cache
+      put  [options] <key> <value>  set the value of the specified key in the specified cache
 
     Options:
 
@@ -28,6 +29,8 @@ Set the project and token to use by running `$ cache token my-token` and
 `$ cache project my-project`. Optionally set a default cache to use:
 `$ cache cache my-cache` otherwise pass the cache to use with the -c (--cache)
 option.
+
+See all of your default settings by running `$ cache defaults`.
 
 ### Example
 
