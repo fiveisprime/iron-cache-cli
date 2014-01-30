@@ -27,7 +27,7 @@ Command line interface for iron cache.
 Set the project and token to use by running `$ cache token my-token` and
 `$ cache project my-project`. Optionally set a default cache to use:
 `$ cache cache my-cache` otherwise pass the cache to use with the -c (--cache)
-options.
+option.
 
 ### Example
 
